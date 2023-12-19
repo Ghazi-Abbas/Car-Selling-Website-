@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Car Selling Website!</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: right;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+    #cart-count {
+        background-color: red;
+        color: white;
+        padding: 5px 8px;
+        border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+
+
+<body>
+    <header>
+        <div class="logo">Car Selling Website!</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+
+                    <a href="#" id="cart-link">Cart <span id="cart-count">0</span></a>
+                    </nav>
+                    
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        // Sample product data
+                        const product = {
+                            id: 1,
+                            name: "Sample Product",
+                            price: 19.99
+                        };
+                    
+                        // Initialize cart count
+                        let cartCount = 0;
+                    
+                        // Get cart link and count elements
+                        const cartLink = document.getElementById("cart-link");
+                        const cartCountElement = document.getElementById("cart-count");
+                    
+                        // Function to handle adding product to cart
+                        const addToCart = () => {
+                            // Increment cart count
+                            cartCount++;
+                            // Update cart count element
+                            cartCountElement.textContent = cartCount;
+                            // You can also perform additional actions here, such as storing the product in a list.
+                            // For simplicity, this example only updates the cart count.
+                        };
+                    
+                        // Attach addToCart function to the click event of the cart link
+                        cartLink.addEventListener("click", addToCart);
+                    });
+                    </script>
+            </ul>
+
+
+        </nav>
+    </header>
+
+    
+
+    
+    <section id="welcome">
+        <div class="welcome-content">
+            <h1>Welcome to Your Stylish Cars</h1>
+            <p>Discover a world of elegance, performance, and innovation. At Your Stylish Cars, we bring you a curated selection of the finest vehicles to elevate your driving experience.</p>
+            
+        </div>
+    </section>
+
+<section id="products">
+    <h2>Featured Cars</h2>
+
+    <div class="product">
+        <img src="car1.jpg " hight="50"  alt="Car 1">
+        <h3>Car Model 1</h3>
+        <p>Description of Car Model 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: $25,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="car2.jpg"  hight="50" alt="Car 2">
+        <h3>Car Model 2</h3>
+        <p>Description of Car Model 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: $30,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="car3.jpg" hight="50"   alt="Car 3">
+        <h3>Car Model 3</h3>
+        <p>Description of Car Model 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: $35,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="car4.jpg"  hight="50" alt="Car 4">
+        <h3>Car Model 4</h3>
+        <p>Description of Car Model 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Price: $40,000</p>
+        <button>Add to Cart</button>
+    </div>
+
+    
+</section>
+
+<!-- ... (remaining HTML code) ... -->
+
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Car Selling Website!, your premier destination for top-quality cars. Our mission is to provide our customers with a seamless and enjoyable car-buying experience. At Your Website Name, we are committed to offering a diverse selection of vehicles to meet the unique preferences and needs of our valued customers.</p>
+        
+        <p>As a customer-centric company, we prioritize transparency, integrity, and customer satisfaction. Our team of experts is dedicated to helping you find the perfect car that suits your lifestyle and budget. Whether you are looking for a sleek sedan, a powerful SUV, or an eco-friendly hybrid, we have a wide range of options for you to explore.</p>
+
+        <p>Thank you for choosing Car Selling Website!. We look forward to serving you and making your car-buying journey enjoyable and stress-free.</p>
+    </section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us by filling out the form below or emailing us directly.</p>
+
+    <form action="contact_process.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+    <footer>
+        <p>&copy; 2023 Car Selling Website!. All rights reserved.</p>
+    </footer>
+</body>
+</html>
